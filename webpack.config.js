@@ -41,7 +41,8 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin({}),
     new HtmlWebpackPlugin({
-      title: "Plugins"
+      title: "Plugins",
+      template: path.resolve(__dirname, "index.html")
     }),
     new MiniCssExtractPlugin({
       filename: "css/[name].css"

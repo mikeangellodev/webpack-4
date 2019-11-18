@@ -1,7 +1,12 @@
+import React from 'react';
+import { render } from 'react-dom';
+
+import App from './components/App'
+
 import '../css/index.css';
 
-import search from './search';
-import render from './render';
+// import search from './search';
+// import render from './render';
 // import text from './text';
 
 // text();
@@ -14,8 +19,11 @@ import render from './render';
   });
 } */
 
-const id = prompt('Dame un ID');
+// const id = prompt('Dame un ID');
 
-search(id)
+/* search(id)
   .then(data => render(data))
-  .catch(error => console.log(error));
+  .catch(error => console.log(error)); */
+
+
+render(<App />, document.getElementById('container'));
