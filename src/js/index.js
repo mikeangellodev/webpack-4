@@ -1,13 +1,21 @@
 import '../css/index.css';
 
-import text from './text';
+import search from './search';
+import render from './render';
+// import text from './text';
 
-text();
+// text();
 
-if (module.hot) {
+/* if (module.hot) {
   module.hot.accept("./text.js", function() {
     console.log('Hot Module Replacement');
     
     text();
   });
-}
+} */
+
+const id = prompt('Dame un ID');
+
+search(id)
+  .then(data => render(data))
+  .catch(error => console.log(error));
